@@ -1,0 +1,6 @@
+<h1>Write a New Story:</h1>
+<%= form_for @story do |f| %>
+<%= select_tag 'park_id', options_for_select(@parks.map{|park| ["#{park.namee}", project.id] }.insert(0, "Select a Park")) %>
+<p><%= f.text_field :title, :placeholder => "Title" %></p>
+<p><%= f.text_area :story, :placeholder => "Story" %></p>
+<p><%= f.submit "Create Story", :class => 'button' %></p>

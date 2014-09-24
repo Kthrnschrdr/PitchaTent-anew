@@ -1,0 +1,11 @@
+<h1><%= @park.name %></h1>
+<p><%= @park.address %></p>
+<p><%= @park.url %></p>
+<%@stories.each do |story| %>
+  <% if story.person != nil %>
+    <p>Stories about this Park:</p>
+    <p>Authored by </p><%= story.person %>
+    <p><%= story.story %></p>
+  <% end %>
+  <p> No stories yet.  YOU should write one!</p>
+<% end %>

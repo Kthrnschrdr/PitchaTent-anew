@@ -1,0 +1,6 @@
+<h1>Add A New Park</h1>
+<%= form_for @park do |f| %>
+	<p><%= f.text_field :name, :placeholder => "Name" %></p>
+	<p><%= f.text_field :address, :placeholder => "Address" %></p>
+	<p><%= f.submit "Add Park", :class => 'button' %></p>
+<% end %>

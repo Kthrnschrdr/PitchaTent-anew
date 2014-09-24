@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
+<link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
 <head>
-  <title>PitchaTent</title>
+  <title>Pitch-a-Tent</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+   <div class="logo">
+   <img src="images/logo.png" id=logo ></img>
+   </div>
+   <div id="bar">
+      <ul>
+	    <li><a href="/parks">See All Nebraska State Parks and Rec Areas</a></li>
+		<li><a href="/">Go Home</a></li>
+	  </ul>
+    </div>
+	
+	<div id="clearfix"></div>
+</header>
 <body>
-
 <%= yield %>
-
 </body>
 </html>
+
