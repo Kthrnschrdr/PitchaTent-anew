@@ -11,19 +11,19 @@
   <div id="tab_content">
 	  <div id="find">	
 		  <h1>Find a park nearby:</h1>
-		  <form action="/person/<%= @person.id %>/parks_nearby" method="get">
+		  <form action="/parks/parks_nearby" method="get">
 			  <input type="text" name="location">
 			  <input type="submit" value="I wanna pitch my tent!">
 		  </form>
   	  </div>
   
   	  <div id="story">
-     	  <h1><a href="/person/<%= @person.id %>/story/new">Add a new story!</a></h1>
+     	  <h1><a href="/stories">Add a new story!</a></h1>
   	  </div>
   
   	  <div id="favorite">
  	      <h1>Record your favorite parks:</h1>
-	 	  <form action="/person/<%= @person.id %>/favorite_parks" method="get">
+	 	  <form action="/parks/favorite_parks" method="get">
 		 	 <select name="park_id">
    			  <%Park.all.each do |park|  %>
     		  <option value="<%= park.id %>"><%= park.name %></option>
