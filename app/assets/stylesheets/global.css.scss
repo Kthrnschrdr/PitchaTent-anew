@@ -8,7 +8,7 @@ html {
 $funfont: 'Cedarville Cursive', cursive;
 $unfunfont: 'Pompiere', cursive;
 
-.l-header {
+%l-header {
 	width: 100%;
 	position: absolute;
 	height: 150px;
@@ -19,7 +19,7 @@ $unfunfont: 'Pompiere', cursive;
 
 
 header {
-  @extend .l-header;
+  @extend %l-header;
   #logo {
     float: left;
   }
@@ -38,13 +38,13 @@ header {
   }
 }
 
-.l-body {
+%l-body {
 	width: 900px;
 	margin: 0 auto;
 	background-image:url('http://brochier.it/images/fabrics/j2594-005-z.jpg');
     }
 body {
-	@extend .l-body
+	@extend %l-body
 	text-align: center;
 	font-family: $unfunfont;
 	font-size: x-large;
