@@ -1,5 +1,16 @@
 PitchaTent::Application.routes.draw do
+  
+  root to: 'parks#index'
 
-  resources :parks, :stories, :people
+  get "email" => 'people#email', :as => "email"
+  get "signup" => 'people#new', :as => "signup"
+  post "create_person" => 'people#create', :as => "create_person"
+  
+  get "login" => 'logins#new', :as => "login"
+  post "login" => 'logins#create', :as => "create_login"
+  
+  get "logout" => 'logins#destroy', :as => "logout"
+
+  resources :parks, :stories 
   
 end
