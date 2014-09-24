@@ -17,4 +17,25 @@ class PeopleController < ApplicationController
     end
   end
   
+  def index
+    @people = Person.all
+  end
+
+  def edit
+    @person = Person.find(params[:id])  
+  end
+
+  def update
+    @person = Person.find(params[:id])
+    @person.update_attributes({name: params["name"]})
+  end
+
+  def destroy
+    @person = Person.find(params[:id]).delete
+  end
+
+  def show
+    @person = Person.find(params[:id])
+  end
+  
 end

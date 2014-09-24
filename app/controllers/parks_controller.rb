@@ -29,17 +29,16 @@ class ParksController < ApplicationController
     @park = Park.find(params[:id]).delete
   end
 
-  # get "/person/:id/parks_nearby" do
-  #   @person = Person.find(params[:id])
-  #   @person.location = (params["location"])
-  #   @parks_nearby = Park.near(@person.location, 100)
-  #   erb :"parks/parks_nearby"
-  # end
-  #
-  # get "/person/:id/favorite_parks" do
-  #   @person = Person.find(params[:id])
-  #   @park = Park.find(params["park_id"])
-  #   @person.parks<<@park
-  #   erb :"parks/favorite_parks"
-  # end
+  def parks_nearby
+    @person = Person.find(params[:id])
+    @person.location = (params["location"])
+    @parks_nearby = Park.near(@person.location, 100)
+  end
+
+  def favorite_parks
+    @person = Person.find(params[:id])
+    @park = Park.find(params["park_id"])
+    @person.parks<<@park
+  end
+  
 end

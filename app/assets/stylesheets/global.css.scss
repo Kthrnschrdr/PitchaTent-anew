@@ -17,7 +17,6 @@ $unfunfont: 'Pompiere', cursive;
 	display: inline-block;
 }
 
-
 header {
   @extend %l-header;
   #logo {
@@ -43,8 +42,9 @@ header {
 	margin: 0 auto;
 	background-image:url('http://brochier.it/images/fabrics/j2594-005-z.jpg');
     }
+	
 body {
-	@extend %l-body
+	@extend %l-body;
 	text-align: center;
 	font-family: $unfunfont;
 	font-size: x-large;

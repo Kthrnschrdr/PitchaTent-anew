@@ -10,7 +10,10 @@ PitchaTent::Application.routes.draw do
   post "login" => 'logins#create', :as => "create_login"
   
   get "logout" => 'logins#destroy', :as => "logout"
-
-  resources :parks, :stories 
+  
+  get "parks_nearby" => 'parks#parks_nearby'
+  get "favorite_parks" => 'parks#favorite_parks'
+  
+  resources :parks, :stories, :people 
   
 end
