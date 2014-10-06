@@ -7,6 +7,7 @@ gem 'rails', '3.2.19'
 
 gem 'pg'
 gem 'geocoder'
+gem 'nokogiri'
 
 
 # Gems used only for assets and not required

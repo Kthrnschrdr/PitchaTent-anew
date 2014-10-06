@@ -1,4 +1,5 @@
 class Park < ActiveRecord::Base
+  require 'open-uri'
   attr_accessible :address, :latitude, :longitude, :name, :url
   has_and_belongs_to_many :people
   has_many :stories
@@ -19,7 +20,7 @@ class Park < ActiveRecord::Base
       
       last_name.gsub!(/\r\n/, '')
     
-      Park.create(name: "#{first_name} #{last_name}", address: "#{street_address} #{city}", park_url: "http://outdoornebraska.ne.gov/       + #{webaddress}")
+      Park.create(name: "#{first_name} #{last_name}", address: "#{street_address} #{city}", url: "http://outdoornebraska.ne.gov/       + #{webaddress}")
     end
   end    
    
