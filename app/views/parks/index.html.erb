@@ -1,6 +1,9 @@
-<h1>Nebraska's State Parks and State Recreation Areas in Which You May Pitch</h2>
-<h1> ...your tent, that is!</h1>
-<%@parks.each do |p|  %>
-<a href="/park/<%= p.id %>"><%= p.name %></a>
-<p><%= p.address %></p>
-<%end%>
+<div class="title"><h1>Nebraska's State Parks and SRAs</div>
+   
+<div class="park">
+  <% @parks.each do |p| %>
+    <h2><%= p.name %></h2>
+    <p><%= p.address %></p>
+    <%= link_to "visit", park_path(p.id) %>
+  <% end %>
+</div>

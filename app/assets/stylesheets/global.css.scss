@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -19,29 +20,33 @@ $unfunfont: 'Pompiere', cursive;
 
 header {
   @extend %l-header;
-  #logo {
-    float: left;
-  }
-  #bar {
-	width: 20%;
-	float: right;
-  }
-  #bar li {
-	text-transform: uppercase;
-	font-family: $unfunfont;
-	font-size: large;
-	color: #FFF;
-  }
-  #clearfix {
-	clear: both;
-  }
+}  
+  
+#logo {
+  float: left;
+}
+
+#bar {
+  width: 20%;
+  float: right;
+}
+  
+#bar li {
+  text-transform: uppercase;
+  font-family: $unfunfont;
+  font-size: large;
+  color: #FFF;
+}
+  
+#clearfix {
+  clear: both;
 }
 
 %l-body {
 	width: 900px;
 	margin: 0 auto;
-	background-image:url('http://brochier.it/images/fabrics/j2594-005-z.jpg');
-    }
+	//background-image:url('http://brochier.it/images/fabrics/j2594-005-z.jpg');
+}
 	
 body {
 	@extend %l-body;
@@ -49,30 +54,37 @@ body {
 	font-family: $unfunfont;
 	font-size: x-large;
 	color: #35200A;
-	h1 {
-	font-family: $funfont;
-  	}
-	p {
-	font-family: $unfunfont;
- 	}
-	#tabbed_interface ul{
-  	margin: 0;
-  	padding: 0;
-  	}
- 	#tabbed_interface li{
-  	display: inline-block;
-  	padding: 30px;
-  	font-size: xx-large;
-  	background-color: #D64A00;
-  	color: #ffffff;
-  	margin-right: 20px;
-  	cursor: pointer;  
-  	}
-  	#tabbed_interface li.active{
-  	color: #FAD1B8;
-  	}
-  	#tab_content{
-  	border: 5px solid #D64A00;
-  	padding: 10px;
-  	}
 }
+
+h1 {
+	font-family: $funfont;
+}
+
+p {
+	font-family: $unfunfont;
+}
+  
+#tabbed_interface ul {
+  margin: 0;
+  padding: 0;
+}
+
+#tabbed_interface li {
+  display: inline-block;
+  padding: 30px;
+  font-size: xx-large;
+  background-color: #D64A00;
+  color: #ffffff;
+  margin-right: 20px;
+  cursor: pointer;  
+}
+
+#tabbed_interface li.active {
+  color: #FAD1B8;
+}
+
+#tab_content {
+  border: 5px solid #D64A00;
+  padding: 10px;
+}
+
