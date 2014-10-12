@@ -1,6 +1,5 @@
 <h1>Welcome <%= @person.name %>!</h1>
 
-
 <div id="tabbed_interface">	
 	<ul>
 		<li data-content="find">Find a Park</li>
@@ -15,22 +14,22 @@
 			  <input type="text" name="location">
 			  <input type="submit" value="I wanna pitch my tent!">
 		  </form>
-  	  </div>
+  	</div>
   
-  	  <div id="story">
-     	  <h1><a href="/stories">Add a new story!</a></h1>
-  	  </div>
+  	<div id="story">
+  	  <h1><a href="/stories">Add a new story!</a></h1>
+    </div>
   
-  	  <div id="favorite">
- 	      <h1>Record your favorite parks:</h1>
-	 	  <form action="/parks/favorite_parks" method="get">
-		 	 <select name="park_id">
-   			  <%Park.all.each do |park|  %>
-    		  <option value="<%= park.id %>"><%= park.name %></option>
-   			  <% end  %>
-		     </select>
-	 	  <input type="submit" value="Love it!">
-         </form>
-      </div>
+    <div id="favorite">
+      <h1>Record your favorite parks:</h1>
+  	  <form action="/parks/favorite_parks" method="get">
+	  	  <select name="park_id">
+   	     <%Park.all.each do |park|  %>
+    	  	 <option value="<%= park.id %>"><%= park.name %></option>
+   		   <% end  %>
+		    </select>
+	 	    <input type="submit" value="Love it!">
+      </form>
+    </div>
   </div>  
 </div>

@@ -38,7 +38,7 @@ class ParksController < ApplicationController
   def favorite_parks
     @person = Person.find(params[:id])
     @park = Park.find(params["park_id"])
-    @person.parks<<@park
+    @person.parks << @park
   end
   
 end
